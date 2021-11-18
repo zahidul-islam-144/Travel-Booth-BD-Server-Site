@@ -128,6 +128,10 @@ async function run() {
   }
   run().catch(console.dir);
 
+  app.get("/", (req, res) => {
+    res.send("Running with the travel-booth-bd server ...");
+  });
+
   app.listen(port, () => {
     console.log("App listening from http://localhost:", port);
 })
